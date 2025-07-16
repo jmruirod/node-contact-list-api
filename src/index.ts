@@ -10,7 +10,8 @@ const app = express();
 app.use(express.json());
 app.use("/", logger);
 app.use("/api", userRoute);
-app.use("/", swaggerUi.serve, swaggerUi.setup(specs));
+app.get("/", swaggerUi.setup(specs));
+app.use("/", swaggerUi.serve);
 app.use("/", unknownEndpoint);
 
 app.listen(PORT, () => {
