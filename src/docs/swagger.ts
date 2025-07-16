@@ -4,9 +4,9 @@ const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Mi API",
+      title: "Agenda telefónica",
       version: "1.0.0",
-      description: "API de ejemplo con TypeScript y Express",
+      description: "Ejercicios del curso Full Stack",
     },
     servers: [
       {
@@ -15,7 +15,7 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ["./src/*.ts"], // Rutas a los archivos que contienen las anotaciones
+  apis: ["./src/routes/*.ts"],
 };
 
 export const specs = swaggerJSDoc(swaggerOptions);
